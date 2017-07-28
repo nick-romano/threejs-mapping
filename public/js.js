@@ -21,21 +21,22 @@ light.position.set(5,3,5);
 scene.add(light);
 
 var sphere = new THREE.Mesh(
-  new THREE.SphereGeometry(0.5, 32, 32),
-  new THREE.MeshPhongMaterial({
-    map: THREE.ImageUtils.loadTexture('2_no_clouds_8k.jpg'),
-    bumpMap: THREE.ImageUtils.loadTexture('elev_bump_4k.jpg'),
-    bumpScale:   0.005,
-    specularMap: THREE.ImageUtils.loadTexture('water_4k.png'),
-    specular: new THREE.Color('grey')      })
-);
+			new THREE.SphereGeometry(0.5, 64, 64),
+			new THREE.MeshPhongMaterial({
+				map:         THREE.ImageUtils.loadTexture('2_no_clouds_4k.jpg'),
+				bumpMap:     THREE.ImageUtils.loadTexture('elev_bump_4k.jpg'),
+				bumpScale:   0.005,
+				specularMap: THREE.ImageUtils.loadTexture('water_4k.png'),
+				specular:    new THREE.Color('grey')								
+			})
+		);
 scene.add(sphere);
 
 
 var clouds = new THREE.Mesh(
-  new THREE.SphereGeometry(0.503, 32, 32),
+  new THREE.SphereGeometry(0.503, 64, 64),
   new THREE.MeshPhongMaterial({
-    map: THREE.ImageUtils.loadTexture('fair_clouds_8k.jpg'),
+    map: THREE.ImageUtils.loadTexture('fair_clouds_4k.png'),
     transparent: true
   })
 );
